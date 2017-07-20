@@ -52,7 +52,7 @@ module Blazer
 
       def preview_statement
         if postgresql?
-          "SELECT * FROM \"{table}\" LIMIT 10"
+          "SELECT * FROM \"{table}\" ORDER BY id DESC LIMIT 10"
         elsif sqlserver?
           "SELECT TOP (10) * FROM {table}"
         else
