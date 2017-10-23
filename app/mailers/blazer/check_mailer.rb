@@ -23,5 +23,13 @@ module Blazer
       # add reply_to for mailing lists
       mail to: email, reply_to: email, subject: "#{pluralize(checks.size, "Check")} Failing"
     end
+
+    private
+
+    def mail(headers, &block)
+      self.default_url_options = default_url_options.merge(host: Blazer.custom_host) if Blazer.custom_host
+
+      super
+    end
   end
 end

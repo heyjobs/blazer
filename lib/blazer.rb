@@ -28,6 +28,7 @@ module Blazer
     attr_accessor :user_method
     attr_accessor :before_action
     attr_accessor :from_email
+    attr_accessor :custom_host
     attr_accessor :cache
     attr_accessor :transform_statement
     attr_accessor :check_schedules

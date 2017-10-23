@@ -745,6 +745,9 @@ audit: true
 
 # email to send checks from
 # from_email: blazer@example.org
+
+# host for links in emails, when running blazer on a domain different from your main app
+# custom_host: <%= ENV["BLAZER_HOST"] %>
 ```
 
 ## TODO
